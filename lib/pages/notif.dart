@@ -6,21 +6,21 @@ class Notifi extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-   // final RemoteMessage message = ModalRoute.of(context)?.settings.arguments as RemoteMessage;
+    // final RemoteMessage message = ModalRoute.of(context)?.settings.arguments as RemoteMessage;
 
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blueAccent,
-        title: Text('Notifications'),
-        centerTitle: true,
-      ),
-      body: ListView(
-        children: [
-          // Text(message.notification!.title.toString()),
-          // Text(message.notification!.body.toString()),
-          // //Text(message.data.toString())
-        ],
-      ),
-    );
+        appBar: AppBar(
+          backgroundColor: Colors.blueAccent,
+          title: Text('Notifications'),
+          centerTitle: true,
+        ),
+        body: Center(
+          child: Text(
+              style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+                  foreground: Paint()..color = Colors.black),
+              'Vous N\'avait Pas Des Notifications Pour Le Moment !'),
+        ));
   }
 }

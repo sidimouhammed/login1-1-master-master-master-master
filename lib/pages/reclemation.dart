@@ -22,7 +22,6 @@ class Rectlmation extends StatefulWidget {
 }
 
 class _RectlmationState extends State<Rectlmation> {
-  
   final List<String> S1_RT1 = [
     'Reseaux 1',
     'Algorithmique',
@@ -51,7 +50,6 @@ class _RectlmationState extends State<Rectlmation> {
 
   final List<String> S1_DI1 = [
     'Architecture',
-
     'MTU',
     'MS Office',
     'Anglais technique 1',
@@ -89,6 +87,7 @@ class _RectlmationState extends State<Rectlmation> {
   String? etat;
   List<String> vide = [];
   String? details;
+  String? NNI;
 
   @override
   void initState() {
@@ -202,12 +201,15 @@ class _RectlmationState extends State<Rectlmation> {
             SizedBox(
               height: 10,
             ),
-            Text(
-                style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                    foreground: Paint()..color = Colors.black),
-                'Nom de Matiere'),
+            Padding(
+              padding: const EdgeInsets.only(left: 10),
+              child: Text(
+                  style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      foreground: Paint()..color = Colors.black),
+                  'Nom de Matiere'),
+            ),
             //Réseaux informatiques et Télécommunications L1
 
             fillier == "Réseaux informatiques et Télécommunications"
@@ -216,7 +218,7 @@ class _RectlmationState extends State<Rectlmation> {
                         padding: EdgeInsets.all(10.0),
                         child: DropdownButton(
                           hint: Text('Sélectionnez une matière'),
-                              isExpanded: true,
+                          isExpanded: true,
                           value: _selectedName,
                           items: S1_RT1.map((String item) {
                             return DropdownMenuItem(
@@ -257,7 +259,10 @@ class _RectlmationState extends State<Rectlmation> {
                               ),
                             ),
                           )
-                        : Text('Appuyer un Semester')
+                        : Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Text('Appuyer un Semester'),
+                          )
 
                 //Développement Informatique L1
                 : fillier == "Développement Informatique"
@@ -286,7 +291,6 @@ class _RectlmationState extends State<Rectlmation> {
                           )
                         : _semester == "Semestre 2"
                             ? Padding(
-                              
                                 padding: const EdgeInsets.all(10.0),
                                 child: DropdownButton(
                                   value: _selectedDIS2,
@@ -308,7 +312,10 @@ class _RectlmationState extends State<Rectlmation> {
                                   ),
                                 ),
                               )
-                            : Text('Appuyer un Semester')
+                            :Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Text('Appuyer un Semester'),
+                          )
                     : Text(''),
 
             // if (_devoirOuExamen == "Devoir")
@@ -533,6 +540,7 @@ class _RectlmationState extends State<Rectlmation> {
       'dateEnvoie': now.toString(),
       'etat': etat,
       'details': details,
+      'NNI': NNI
       //'examen'
     });
   }
@@ -583,6 +591,7 @@ class _RectlmationState extends State<Rectlmation> {
               nom = studentDoc['full_name'] ?? '';
               emailUser = studentDoc['Email'] ?? '';
               fillier = studentDoc['filiére'] ?? '';
+              NNI = studentDoc['NNI'] ?? '';
               // _fullNameController.text = studentDoc['full_name'] ?? '';
               // _phoneNumberController.text = studentDoc['tel'] ?? '';
             });
