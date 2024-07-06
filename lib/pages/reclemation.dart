@@ -497,7 +497,7 @@ class _RectlmationState extends State<Rectlmation> {
                           fontSize: 19,
                           fontWeight: FontWeight.bold,
                           foreground: Paint()..color = Colors.black),
-                      'Envoié ')),
+                      'Envoyée')),
             ),
           ],
         ),

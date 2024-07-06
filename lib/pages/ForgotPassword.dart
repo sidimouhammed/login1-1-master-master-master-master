@@ -61,7 +61,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primaryContainer,
       appBar: AppBar(
-        title: Text("Reset Mot de passe"),
+        title: Text("Réinitialiser le Mot de passe"),
         elevation: 0,
         backgroundColor: Colors.blueAccent,
       ),
@@ -75,8 +75,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
               children: [
                 Text("Entrez votre e-mail pour Réinitialiser le",
                     style: TextStyle(fontSize: 18)),
-                    Text("Mot de passe.",
-                    style: TextStyle(fontSize: 18)),
+                Text("Mot de passe.", style: TextStyle(fontSize: 18)),
                 SizedBox(
                   height: 33,
                 ),

@@ -321,8 +321,6 @@ class _SignupState extends State<Signup> {
     datas.addAll(querySnapshot.docs);
     print(datas);
     for (int i = 0; i < datas.length; i++) {
-    
-    
       if (_controllernni.text == datas[i]['nni']) {
         print(datas[i]['nni']);
         setState(() {
@@ -588,7 +586,7 @@ class _SignupState extends State<Signup> {
                 keyboardType: TextInputType.name,
                 focusNode: _focusNodeuser,
                 decoration: InputDecoration(
-                  labelText: "Username",
+                  labelText: "Nom et prénom",
                   prefixIcon: const Icon(Icons.person_outline),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
@@ -714,7 +712,7 @@ class _SignupState extends State<Signup> {
                       ),
                     ),
                     onPressed: () async {
-                       await getData();
+                      await getData();
                       if (_formKey.currentState!.validate() &&
                           imgName != null &&
                           imgPath != null) {

@@ -84,7 +84,7 @@ class _AfficheReclemationState extends State<AfficheReclemation> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blueAccent,
-        title: const Text('Reclamation Envoié'),
+        title: const Text('Reclamation Envoyée'),
         centerTitle: true,
       ),
       body: isLoading
@@ -178,7 +178,7 @@ class _AfficheReclemationState extends State<AfficheReclemation> {
         return Colors.redAccent;
       case 'Acceptée':
         return Color.fromARGB(255, 134, 255, 82);
-      case 'Révisée':
+      case 'Revisée':
         return Colors.blueAccent;
       default:
         return Colors.grey;
